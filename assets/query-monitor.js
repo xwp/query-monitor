@@ -108,6 +108,9 @@ jQuery( function($) {
 				e.preventDefault();
 				lastHref = null;
 				$('html,body').scrollTop(resetTop);
+				if ( history.pushState ) {
+					history.pushState( '', document.title, window.location.pathname );
+				}
 			} else {
 				lastHref = currentHref;
 			}
