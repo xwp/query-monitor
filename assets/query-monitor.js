@@ -104,7 +104,7 @@ jQuery( function($) {
 				resetTop = scrollTop;
 			}
 
-			if ( ( lastHref && lastHref === currentHref ) || ( scrollTop > qmTop && '#qm-overview' === currentHref ) ) {
+			if ( ( lastHref && lastHref === currentHref ) && ( scrollTop > qmTop ) ) {
 				e.preventDefault();
 				lastHref = null;
 				$('html,body').scrollTop(resetTop);
